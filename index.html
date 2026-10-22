@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Olimjonov Qilichbekning shaxsiy veb-sahifasi — yangiliklar, faoliyat va bog‘lanish.">
+<title>Olimjonov Qilichbek | Shaxsiy sahifa</title>
+<style>
+:root{--bg:#f5f7fb;--ink:#152238;--muted:#66758b;--green:#13795b;--green2:#0b5b45;--line:#e3e9f0;--white:#fff;--gold:#d8b56d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:24px}.brand{font-weight:800;letter-spacing:-.04em;font-size:1.05rem}.brand span{color:var(--green)}nav{display:flex;align-items:center;gap:28px;color:#526176;font-size:.94rem}nav a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:12px;background:var(--green);color:white;font-weight:700;border:1px solid var(--green);transition:.2s;cursor:pointer}.btn:hover{background:var(--green2);transform:translateY(-1px)}.btn.ghost{background:white;color:var(--green);border-color:#cfe2da}
+.hero{padding:82px 0 74px;background:radial-gradient(circle at 80% 20%,#d9efe6 0,transparent 31%),linear-gradient(135deg,#fff 0%,#f1f7f4 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.dot{width:8px;height:8px;background:#31a879;border-radius:50%;box-shadow:0 0 0 5px #d9efe6}
+h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.03;letter-spacing:-.065em;margin:20px 0 22px;max-width:760px}h1 em{font-style:normal;color:var(--green)}.intro{max-width:620px;color:var(--muted);font-size:1.12rem;margin:0 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+.profile-card{position:relative;min-height:350px;border-radius:28px;padding:30px;background:linear-gradient(145deg,#174f42,#0e2f2c);color:white;box-shadow:0 24px 60px #0b5b4526;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}.profile-card:before,.profile-card:after{content:"";position:absolute;border:1px solid #ffffff25;border-radius:50%;width:270px;height:270px;right:-85px;top:-95px}.profile-card:after{width:190px;height:190px;right:-45px;top:-55px}.monogram{position:relative;z-index:1;width:78px;height:78px;border-radius:24px;display:grid;place-items:center;background:#ffffff16;border:1px solid #ffffff30;font-size:1.6rem;font-weight:800;letter-spacing:-.06em}.profile-card .small{position:relative;z-index:1;color:#b8d8cc;font-size:.8rem;text-transform:uppercase;letter-spacing:.15em}.profile-card h2{position:relative;z-index:1;font-size:2rem;line-height:1.15;letter-spacing:-.04em;margin:8px 0}.profile-card p{position:relative;z-index:1;color:#d3e6df;margin:0}.card-footer{position:relative;z-index:1;border-top:1px solid #ffffff28;padding-top:18px;display:flex;justify-content:space-between;align-items:center;color:#c6e1d7;font-size:.88rem}
+section{padding:76px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.kicker{font-size:.78rem;color:var(--green);font-weight:800;letter-spacing:.13em;text-transform:uppercase}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.055em;line-height:1.1;margin:8px 0 0}.section-head p{max-width:420px;color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px}.about-panel{background:white;border:1px solid var(--line);border-radius:22px;padding:28px}.about-panel h3{margin:0 0 12px;font-size:1.25rem;letter-spacing:-.03em}.about-panel p{margin:0;color:var(--muted)}.values{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.value{padding:20px;border-radius:17px;background:#f7faf8;border:1px solid #e2eee8}.value b{display:block;margin-bottom:4px}.value span{font-size:.9rem;color:var(--muted)}.value .ico{display:grid;place-items:center;width:38px;height:38px;background:#e0f1e9;color:var(--green);border-radius:12px;margin-bottom:14px;font-size:1.1rem}
+.news{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.news-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:white;transition:.2s}.news-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px #10243a0c}.news-art{height:155px;display:flex;align-items:end;padding:20px;background:linear-gradient(135deg,#dcefe6,#f5f8f6);position:relative;overflow:hidden}.news-art:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;border:25px solid #13795b12;right:-20px;top:-45px}.news-art span{position:relative;background:#fff;color:var(--green);padding:6px 10px;border-radius:8px;font-size:.75rem;font-weight:800}.news-body{padding:22px}.date{font-size:.8rem;color:#8491a2}.news-body h3{font-size:1.12rem;line-height:1.35;letter-spacing:-.025em;margin:9px 0}.news-body p{font-size:.92rem;color:var(--muted);margin:0 0 16px}.read{color:var(--green);font-size:.9rem;font-weight:800}.placeholder-note{font-size:.83rem;color:#8491a2;margin-top:18px}
+.contact{background:linear-gradient(135deg,#103d35,#0c2c2b);color:white}.contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}.contact h2{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.06em;line-height:1.06;margin:12px 0 18px}.contact p{color:#c3d9d2;max-width:540px}.contact .kicker{color:#9ad8bd}.contact-box{background:#ffffff0d;border:1px solid #ffffff25;border-radius:22px;padding:26px}.contact-box label{display:block;font-size:.84rem;color:#c3d9d2;margin:0 0 7px}.contact-box input,.contact-box textarea{width:100%;padding:13px 14px;border-radius:10px;border:1px solid #ffffff2c;background:#ffffff0c;color:white;font:inherit;margin-bottom:14px;outline:none}.contact-box input:focus,.contact-box textarea:focus{border-color:#7bd1ad}.contact-box textarea{min-height:95px;resize:vertical}.contact-box input::placeholder,.contact-box textarea::placeholder{color:#a6c2b9}.contact-box .btn{width:100%;background:#c4ecd9;color:#104438;border-color:#c4ecd9}.contact-hint{font-size:.78rem;color:#a9c9bf;margin:12px 0 0}
+footer{padding:24px 0;background:#082421;color:#a8c0b8;font-size:.88rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:white}
+@media(max-width:800px){nav{gap:14px}nav a:not(.btn){display:none}.hero{padding:58px 0}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:28px}.profile-card{min-height:290px}.news-grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.values{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.wrap{width:min(100% - 28px,1120px)}.nav{min-height:66px}.nav .btn{padding:10px 12px;font-size:.85rem}.hero{padding:46px 0}.values{grid-template-columns:1fr}.profile-card{padding:24px}section{padding:58px 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">QILICHBEK<span>.</span></a>
+    <nav aria-label="Asosiy menyu">
+      <a href="#about">Men haqimda</a><a href="#news">Yangiliklar</a><a href="#contact">Bog‘lanish</a>
+      <a class="btn" href="#contact">Aloqa <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Shaxsiy sahifa</div>
+        <h1>Olimjonov<br><em>Qilichbek</em></h1>
+        <p class="intro">Hayotiy tajriba va yangiliklar uchun shaxsiy onlayn makon. Bu sahifa men haqimdagi muhim ma’lumotlar va yangiliklarni bir joyda jamlaydi.</p>
+        <div class="actions"><a class="btn" href="#about">Tanishib chiqish <span aria-hidden="true">↓</span></a><a class="btn ghost" href="#contact">Bog‘lanish</a></div>
+      </div>
+      <aside class="profile-card" aria-label="Profil kartasi">
+        <div class="monogram">OQ</div>
+        <div><div class="small">Shaxsiy profil</div><h2>Olimjonov<br>Qilichbek</h2><p>Ochiq muloqot · Yangi imkoniyatlar · Rivojlanish</p></div>
+        <div class="card-footer"><span>Rasmiy sahifa</span><span>✦ 2026</span></div>
+      </aside>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">Men haqimda</div><h2>Qisqacha tanishing</h2></div><p>Ushbu bo‘limni o‘zingizning tarjimai holingiz, kasbiy tajribangiz va yutuqlaringiz bilan to‘ldirish mumkin.</p></div>
+      <div class="about-grid">
+        <div class="about-panel"><h3>Maqsad va qarashlar</h3><p>Hayotiy tajriba insonni chiniqtiradi, qarorlarimizni teranlashtiradi va yangi maqsadlar sari yo‘l ochadi.</p></div>
+        <div class="about-panel"><div class="values">
+          <div class="value"><div class="ico">✦</div><b>Rivojlanish</b><span>Doimiy o‘sish va yangi bilimlar.</span></div>
+          <div class="value"><div class="ico">◎</div><b>Ishonch</b><span>Ochiq va samimiy muloqot.</span></div>
+          <div class="value"><div class="ico">↗</div><b>Tashabbus</b><span>G‘oyalarni amaliyotga tatbiq etish.</span></div>
+          <div class="value"><div class="ico">◇</div><b>Hamkorlik</b><span>Birgalikda yaxshi natijalarga erishish.</span></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="news" id="news">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker">So‘nggi xabarlar</div><h2>Yangiliklar va e’lonlar</h2></div><p>Bu yerda faoliyatingiz, loyihalaringiz yoki muhim voqealar haqida yangiliklar joylashtiriladi.</p></div>
+      <div class="news-grid">
+        <article class="news-card"><div class="news-art"><span>YANGILIK</span></div><div class="news-body"><div class="date">Yangilik · Sana qo‘shiladi</div><h3>Yangi maqsadlar sari</h3><p>Bu namunaviy yangilik matni. Uni o‘zingizning haqiqiy xabaringiz bilan almashtiring.</p><a class="read" href="#contact">Batafsil ma’lumot ↗</a></div></article>
+        <article class="news-card"><div class="news-art" style="background:linear-gradient(135deg,#e2e8f7,#f7f8fc)"><span>LOYIHA</span></div><div class="news-body"><div class="date">Loyiha · Sana qo‘shiladi</div><h3>Yangi imkoniyatlar va hamkorlik</h3><p>Yangi tashabbuslar, hamkorliklar va amalga oshirilayotgan ishlar haqida qisqacha ma’lumot.</p><a class="read" href="#contact">Batafsil ma’lumot ↗</a></div></article>
+        <article class="news-card"><div class="news-art" style="background:linear-gradient(135deg,#f5e9d6,#fbf8f1)"><span>E’LON</span></div><div class="news-body"><div class="date">E’lon · Sana qo‘shiladi</div><h3>Yangiliklar shu sahifada</h3><p>Muhim e’lonlar va kelgusi rejalarni shu bo‘lim orqali o‘quvchilarga yetkazishingiz mumkin.</p><a class="read" href="#contact">Batafsil ma’lumot ↗</a></div></article>
+      </div>
+      <p class="placeholder-note">Eslatma: yuqoridagi yangiliklar dizayn namunasi uchun kiritilgan — haqiqiy xabarlar emas.</p>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div><div class="kicker">Bog‘lanish</div><h2>Fikr yoki taklifingiz bormi?</h2><p>Hamkorlik, savollar yoki boshqa masalalar bo‘yicha bog‘lanishingiz mumkin. Telefon orqali bog‘laning yoki Instagram sahifamga tashrif buyuring.</p><div class="actions"><a class="btn" href="tel:+998908788777">Qo‘ng‘iroq qilish ↗</a><a class="btn ghost" style="background:transparent;color:white;border-color:#ffffff55" href="https://instagram.com/qilichbek_020" target="_blank" rel="noopener">Instagram ↗</a></div><p><strong>Telefon:</strong> <a href="tel:+998908788777">+998 90 878 87 77</a><br><strong>Ijtimoiy tarmoq:</strong> <a href="https://instagram.com/qilichbek_020" target="_blank" rel="noopener">@qilichbek_020</a></p></div>
+      <form class="contact-box" id="contactForm">
+        <label for="name">Ismingiz</label><input id="name" name="name" placeholder="Ismingizni kiriting" required>
+        <label for="phone">Telefon raqamingiz</label><input id="phone" name="phone" type="tel" placeholder="+998 __ ___ __ __" required>
+        <label for="message">Xabaringiz</label><textarea id="message" name="message" placeholder="Xabaringizni yozing..." required></textarea>
+        <button class="btn" type="submit">Xabarni tayyorlash ↗</button>
+        <p class="contact-hint">Xabar e-mail dasturi orqali tayyorlanadi. To‘liq onlayn yuborish uchun server yoki forma xizmati ulash kerak.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 <strong>Olimjonov Qilichbek</strong>. Barcha huquqlar himoyalangan.</span><a href="#home">Yuqoriga qaytish ↑</a></div></footer>
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value.trim();
+ const phone=document.getElementById('phone').value.trim();
+ const message=document.getElementById('message').value.trim();
+ const subject=encodeURIComponent('Sayt orqali murojaat — '+name);
+ const body=encodeURIComponent('Ism: '+name+'\nTelefon: '+phone+'\nXabar: '+message);
+ window.location.href='mailto:?subject='+subject+'&body='+body;
+});
+</script>
+</body>
+</html>
